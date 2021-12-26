@@ -11,6 +11,7 @@
 html {
   box-sizing: border-box;
 }
+
 *,
 *::after,
 *::before {
@@ -25,6 +26,7 @@ h5,
 h6,
 p {
   margin-top: 0;
+  margin-bottom: 0;
 }
 
 img {
@@ -60,7 +62,32 @@ body {
   clip-path: inset(50%);
   margin: -1px;
 }
+.container {
+  width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 15px;
+  /* outline: 2px solid red; */
+}
+button {
+  border: 1px solid transparent;
+}
 /* ------------------Header----------------------*/
+.page-header {
+  display: flex;
+  border-bottom: 1px solid #ececec;
+}
+.container-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 24px 0 25px 0;
+}
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 .logo {
   font-family: Raleway;
   font-weight: bold;
@@ -68,29 +95,42 @@ body {
   line-height: 1.19;
   letter-spacing: 0.03em;
   color: var(--accent-color);
+  display: inline-block;
+  margin-right: 43px;
 }
 .accent-top {
   color: var(--accent-topcolor);
 }
 .header-list {
   color: var(--brand-color);
+  display: flex;
 }
-
+.header-connect {
+  display: flex;
+  justify-content: space-between;
+}
+.header-item {
+  margin: 0 25px;
+}
 .header-link {
   font-weight: 500;
   line-height: 16px;
   letter-spacing: 0.02em;
+  display: inline-block;
 }
 .header-link:focus,
 .header-link:hover,
 .current {
   color: var(--accent-color);
 }
-
+.header-tel {
+  margin-left: 50px;
+}
 /* ------------------------Hero------------------------- */
 .hero {
   background-color: var(--bacground-color);
   text-align: center;
+  padding: 200px 0;
 }
 .hero-title {
   font-weight: 900;
@@ -100,6 +140,7 @@ body {
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--primary-color);
+  margin-bottom: 30px;
 }
 .hero-button {
   background-color: var(--accent-color);
@@ -110,6 +151,9 @@ body {
   letter-spacing: 0.06em;
   color: var(--primary-color);
   cursor: pointer;
+  border-radius: 4px;
+  padding: 10px 32px;
+  display: inline-block;
 }
 .hero-button:hover,
 .hero-button:focus {
@@ -117,15 +161,40 @@ body {
 }
 
 /* -------------------Services--------------------------- */
+.services-list {
+  display: flex;
+}
 .services-title {
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: var(--brand-color);
+  margin-bottom: 10px;
 }
+.services-item:first-child {
+  margin-right: 15px;
+}
+.services-item {
+  margin: 0 15px;
+}
+.services-item:last-child {
+  margin-left: 15px;
+}
+/* ---------------------------Doing---------------------------- */
 
+.doing-list {
+  display: flex;
+  margin: 50px 0 94px 0;
+}
+.doing-item:nth-child(2) {
+  margin: 0 30px;
+}
 /* ---------------------------Team---------------------------- */
+
+.services-list {
+  margin: 94px 0px;
+}
 
 .section-title {
   font-weight: bold;
@@ -138,8 +207,13 @@ body {
 
 .team {
   background-color: var(--background-precolor);
+  padding: 94px 0;
 }
-
+.team-list {
+  display: flex;
+  justify-content: center;
+  margin: 50px 0 94px 0;
+}
 .team-post,
 .team-pre-title {
   font-size: 16px;
@@ -150,8 +224,27 @@ body {
 .team-pre-title {
   font-weight: 500;
   color: var(--brand-color);
+  padding-top: 30px;
+  margin: 0;
+  margin-bottom: 10px;
 }
-
+.team-post {
+  padding-bottom: 30px;
+}
+.team-item {
+  /* border: 1px solid #000; */
+  margin: 0 15px;
+  background: #ffffff;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
+}
+.team-item:first-child {
+  margin-left: 0;
+}
+.team-item:last-child {
+  margin-right: 0;
+}
 /* ---------------------Portfolio button---------------- */
 
 .example-btn {
@@ -185,17 +278,30 @@ body {
   line-height: 1.87;
   letter-spacing: 0.03em;
 }
-/* -----------------------Footer------------------------ */
+/* -------------------------Footer------------------------ */
 
 .footer {
   background-color: var(--bacground-color);
 }
 
+.footer .logo {
+  padding: 60px 0 20px 0;
+}
+
+.address-list {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
 .accent-foot {
   color: var(--primary-color);
 }
+
 .address {
   font-style: normal;
+  display: flex;
+  padding-bottom: 60px;
 }
 .address-city {
   color: var(--primary-color);
@@ -203,4 +309,9 @@ body {
 .connect .link:focus,
 .connect .link:hover {
   color: #b6b6b6;
+}
+.address .link {
+  display: inline-block;
+  padding-top: 0;
+  padding-bottom: 9px;
 }
