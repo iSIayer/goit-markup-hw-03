@@ -1,0 +1,206 @@
+:root {
+  --text-color: #757575;
+  --brand-color: #212121;
+  --accent-color: #2196f3;
+  --accent-precolor: #188ce8;
+  --primary-color: #ffffff;
+  --bacground-color: #2f303a;
+  --background-precolor: #f5f4fa;
+  --accent-topcolor: #000000;
+}
+html {
+  box-sizing: border-box;
+}
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin-top: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  color: var(--text-color);
+}
+.list {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+.link {
+  text-decoration: none;
+  color: inherit;
+}
+.visually-hidden {
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  margin: -1px;
+}
+/* ------------------Header----------------------*/
+.logo {
+  font-family: Raleway;
+  font-weight: bold;
+  font-size: 26px;
+  line-height: 1.19;
+  letter-spacing: 0.03em;
+  color: var(--accent-color);
+}
+.accent-top {
+  color: var(--accent-topcolor);
+}
+.header-list {
+  color: var(--brand-color);
+}
+
+.header-link {
+  font-weight: 500;
+  line-height: 16px;
+  letter-spacing: 0.02em;
+}
+.header-link:focus,
+.header-link:hover,
+.current {
+  color: var(--accent-color);
+}
+
+/* ------------------------Hero------------------------- */
+.hero {
+  background-color: var(--bacground-color);
+  text-align: center;
+}
+.hero-title {
+  font-weight: 900;
+  font-size: 44px;
+  line-height: 1.36;
+  text-align: center;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--primary-color);
+}
+.hero-button {
+  background-color: var(--accent-color);
+  font-family: inherit;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 1.87;
+  letter-spacing: 0.06em;
+  color: var(--primary-color);
+  cursor: pointer;
+}
+.hero-button:hover,
+.hero-button:focus {
+  background-color: var(--accent-precolor);
+}
+
+/* -------------------Services--------------------------- */
+.services-title {
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--brand-color);
+}
+
+/* ---------------------------Team---------------------------- */
+
+.section-title {
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 42px;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: var(--brand-color);
+}
+
+.team {
+  background-color: var(--background-precolor);
+}
+
+.team-post,
+.team-pre-title {
+  font-size: 16px;
+  line-height: 1.18;
+  text-align: center;
+  letter-spacing: 0.03em;
+}
+.team-pre-title {
+  font-weight: 500;
+  color: var(--brand-color);
+}
+
+/* ---------------------Portfolio button---------------- */
+
+.example-btn {
+  font-weight: 500;
+  font-size: 16px;
+  font-family: inherit;
+  line-height: 1.62;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: var(--brand-color);
+  cursor: pointer;
+}
+
+.example-btn:hover,
+.example-btn:focus,
+.active {
+  color: var(--primary-color);
+  background-color: var(--accent-color);
+}
+/* ------------Portfolio items ------------------------------*/
+
+.pf-title {
+  font-size: 18px;
+  line-height: 2;
+  letter-spacing: 0.06em;
+  color: var(--brand-color);
+}
+
+.pf-pre-title {
+  font-size: 16px;
+  line-height: 1.87;
+  letter-spacing: 0.03em;
+}
+/* -----------------------Footer------------------------ */
+
+.footer {
+  background-color: var(--bacground-color);
+}
+
+.accent-foot {
+  color: var(--primary-color);
+}
+.address {
+  font-style: normal;
+}
+.address-city {
+  color: var(--primary-color);
+}
+.connect .link:focus,
+.connect .link:hover {
+  color: #b6b6b6;
+}
