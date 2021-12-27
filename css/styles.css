@@ -303,6 +303,7 @@ button {
   margin-right: 30px;
   margin-bottom: 30px;
   margin-left: 0;
+  border-bottom: 1px solid var(--border-cardscolor);
   /* outline: 1px solid teal; */
 }
 
