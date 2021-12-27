@@ -8,7 +8,7 @@
   --background-precolor: #f5f4fa;
   --accent-topcolor: #000000;
   --button-color: #e5e5e5;
-  --border-cardscolor #EEEEEE
+  --border-cardscolor: #eeeeee;
 }
 html {
   box-sizing: border-box;
@@ -277,7 +277,6 @@ button {
   background-color: var(--accent-color);
 }
 
-
 .btn-container {
   display: flex;
   justify-content: center;
@@ -305,6 +304,7 @@ button {
   margin-right: 30px;
   margin-bottom: 30px;
   margin-left: 0;
+  border-bottom-color: 1px solid var(--border-cardscolor);
   /* background-color: tomato; */
   /* outline: 1px solid teal; */
 }
