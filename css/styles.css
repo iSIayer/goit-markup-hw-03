@@ -246,6 +246,12 @@ button {
 .team-item:last-child {
   margin-right: 0;
 }
+/* ---------------------Section Portfolio--------------- */
+
+.main-cards {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
 /* ---------------------Portfolio button---------------- */
 
 .example-btn {
@@ -276,21 +282,12 @@ button {
   background-color: var(--accent-color);
 }
 
-.btn-container {
+.btn-list {
   display: flex;
   justify-content: center;
-  padding-top: 94px;
+  /* outline: 1px solid red; */
 }
 /* ------------------------- Portfolio items ------------------------------*/
-
-.container-card {
-  width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 0;
-  outline: 2px solid red;
-  padding-bottom: 94px;
-}
 
 .portfolio-list {
   display: flex;
@@ -298,6 +295,7 @@ button {
   margin-right: -30px;
   margin-bottom: -30px;
   margin-top: 34px;
+  /* outline: 1px solid red; */
 }
 
 .portfolio-list > .pf-item {
@@ -305,7 +303,7 @@ button {
   margin-right: 30px;
   margin-bottom: 30px;
   margin-left: 0;
-  outline: 1px solid teal;
+  /* outline: 1px solid teal; */
 }
 
 .pf-title {
