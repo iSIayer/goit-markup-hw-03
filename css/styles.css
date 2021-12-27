@@ -7,6 +7,8 @@
   --bacground-color: #2f303a;
   --background-precolor: #f5f4fa;
   --accent-topcolor: #000000;
+  --button-color: #e5e5e5;
+  --border-cards-color #EEEEEE
 }
 html {
   box-sizing: border-box;
@@ -256,6 +258,16 @@ button {
   letter-spacing: 0.03em;
   color: var(--brand-color);
   cursor: pointer;
+  padding: 6px 22px;
+  border-radius: 4px;
+  background-color: var(--button-color);
+}
+.example-item {
+  display: inline-block;
+  margin-right: 8px;
+}
+.example-item:last-child {
+  margin-right: 0;
 }
 
 .example-btn:hover,
@@ -264,19 +276,52 @@ button {
   color: var(--primary-color);
   background-color: var(--accent-color);
 }
+
+
+.btn-container {
+  display: flex;
+  justify-content: center;
+  padding-top: 94px;
+}
 /* ------------Portfolio items ------------------------------*/
+.container-card {
+  width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0;
+  /* outline: 2px solid red; */
+}
+
+.portfolio-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -30px;
+  margin-bottom: 94px;
+  margin-top: 34px;
+}
+
+.portfolio-list > .pf-item {
+  flex-basis: calc(100% / 3 -30px);
+  margin-right: 30px;
+  margin-bottom: 30px;
+  margin-left: 0;
+  /* background-color: tomato; */
+  /* outline: 1px solid teal; */
+}
 
 .pf-title {
   font-size: 18px;
   line-height: 2;
   letter-spacing: 0.06em;
   color: var(--brand-color);
+  padding: 20px 24px 4px;
 }
 
 .pf-pre-title {
   font-size: 16px;
   line-height: 1.87;
   letter-spacing: 0.03em;
+  padding: 0 24px 20px;
 }
 /* -------------------------Footer------------------------ */
 
@@ -310,8 +355,11 @@ button {
 .connect .link:hover {
   color: #b6b6b6;
 }
-.address .link {
+.address-item {
   display: inline-block;
   padding-top: 0;
   padding-bottom: 9px;
+}
+.address-item:last-child {
+  padding-bottom: 0;
 }
