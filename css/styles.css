@@ -70,11 +70,26 @@ body {
   margin-left: auto;
   margin-right: auto;
   padding: 0 15px;
-  /* outline: 2px solid red; */
 }
 button {
   border: 1px solid transparent;
 }
+.section {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+.item {
+  margin-top: 30px;
+  margin-left: 30px;
+}
+
+.card-set {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: -30px;
+  margin-left: -30px;
+}
+
 /* ------------------Header----------------------*/
 .page-header {
   border-bottom: 1px solid #ececec;
@@ -82,8 +97,6 @@ button {
 .container-head {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  padding: 24px 0 25px 0;
 }
 .nav-container {
   display: flex;
@@ -98,7 +111,7 @@ button {
   letter-spacing: 0.03em;
   color: var(--accent-color);
   display: inline-block;
-  margin-right: 43px;
+  margin-right: 93px;
 }
 .accent-top {
   color: var(--accent-topcolor);
@@ -107,18 +120,22 @@ button {
   color: var(--brand-color);
   display: flex;
 }
+li.header-item:not(:last-child) {
+  margin-right: 50px;
+}
+
 .header-connect {
   display: flex;
   justify-content: space-between;
+  margin-left: auto;
 }
-.header-item {
-  margin: 0 25px;
-}
+
 .header-link {
   font-weight: 500;
   line-height: 16px;
   letter-spacing: 0.02em;
   display: inline-block;
+  padding: 32px 0;
 }
 .header-link:focus,
 .header-link:hover,
@@ -132,7 +149,8 @@ button {
 .hero {
   background-color: var(--bacground-color);
   text-align: center;
-  padding: 200px 0;
+  padding-top: 200px;
+  padding-bottom: 200px;
 }
 .hero-title {
   font-weight: 900;
@@ -155,7 +173,6 @@ button {
   cursor: pointer;
   border-radius: 4px;
   padding: 10px 32px;
-  display: inline-block;
 }
 .hero-button:hover,
 .hero-button:focus {
@@ -163,9 +180,14 @@ button {
 }
 
 /* -------------------Services--------------------------- */
-.services-list {
-  display: flex;
+main .doing {
+  padding-top: 0;
 }
+
+.services-item {
+  flex-basis: calc(100% / 4 - var(--card-set-gap));
+}
+
 .services-title {
   font-size: 14px;
   line-height: 1.14;
@@ -174,29 +196,8 @@ button {
   color: var(--brand-color);
   margin-bottom: 10px;
 }
-.services-item:first-child {
-  margin-left: auto;
-}
-.services-item {
-  margin: 0 15px;
-}
-.services-item:last-child {
-  margin-right: auto;
-}
+
 /* ---------------------------Doing---------------------------- */
-
-.doing-list {
-  display: flex;
-  margin: 50px 0 94px 0;
-}
-.doing-item:nth-child(2) {
-  margin: 0 30px;
-}
-/* ---------------------------Team---------------------------- */
-
-.services-list {
-  margin: 94px 0px;
-}
 
 .section-title {
   font-weight: bold;
@@ -205,17 +206,26 @@ button {
   text-align: center;
   letter-spacing: 0.03em;
   color: var(--brand-color);
+  margin-bottom: 50px;
 }
+
+.doing-item {
+  flex-basis: calc(100% / 3 - var(--card-set-gap));
+}
+/* ---------------------------Team---------------------------- */
 
 .team {
   background-color: var(--background-precolor);
-  padding: 94px 0;
 }
-.team-list {
-  display: flex;
-  justify-content: center;
-  margin: 50px 0 94px 0;
+
+.team-item {
+  background: var(--primary-color);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  flex-basis: calc(100% / 4 - var(--card-set-gap));
+  border-radius: 0px 0px 4px 4px;
 }
+
 .team-post,
 .team-pre-title {
   font-size: 16px;
@@ -226,33 +236,14 @@ button {
 .team-pre-title {
   font-weight: 500;
   color: var(--brand-color);
-  padding-top: 30px;
-  margin: 0;
   margin-bottom: 10px;
 }
-.team-post {
-  padding-bottom: 30px;
+.card-title {
+  padding: 30px 55px;
 }
-.team-item {
-  /* border: 1px solid #000; */
-  margin: 0 15px;
-  background: #ffffff;
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
-    0px 2px 1px rgba(0, 0, 0, 0.2);
-  border-radius: 0px 0px 4px 4px;
-}
-.team-item:first-child {
-  margin-left: 0;
-}
-.team-item:last-child {
-  margin-right: 0;
-}
-/* ---------------------Section Portfolio--------------- */
 
-.main-cards {
-  padding-top: 94px;
-  padding-bottom: 94px;
-}
+/* ------------------------------Section Portfolio-------------------------- */
+
 /* ---------------------Portfolio button---------------- */
 
 .example-btn {
@@ -269,7 +260,6 @@ button {
   background-color: var(--button-color);
 }
 .example-item {
-  display: inline-block;
   margin-right: 8px;
 }
 .example-item:last-child {
@@ -281,31 +271,20 @@ button {
 .active {
   color: var(--primary-color);
   background-color: var(--accent-color);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
+  border-radius: 4px;
 }
 
 .btn-list {
   display: flex;
   justify-content: center;
-  /* outline: 1px solid red; */
+  margin-bottom: 50px;
 }
 /* ------------------------- Portfolio items ------------------------------*/
 
-.portfolio-list {
-  display: flex;
-  flex-wrap: wrap;
-  margin-right: calc(-1 * var(--card-set-gap));
-  margin-bottom: calc(-1 * var(--card-set-gap));
-  margin-top: 34px;
-  /* outline: 1px solid red; */
-}
-
-.portfolio-list > .pf-item {
+.pf-item {
   flex-basis: calc(100% / 3 - var(--card-set-gap));
-  margin-right: var(--card-set-gap);
-  margin-bottom: var(--card-set-gap);
-  margin-left: 0;
-  border-bottom: 1px solid var(--border-cardscolor);
-  /* outline: 1px solid teal; */
 }
 
 .pf-title {
@@ -313,39 +292,40 @@ button {
   line-height: 2;
   letter-spacing: 0.06em;
   color: var(--brand-color);
-  padding: 20px 24px 4px;
+  margin-bottom: 4px;
 }
 
 .pf-pre-title {
   font-size: 16px;
   line-height: 1.87;
   letter-spacing: 0.03em;
-  padding: 0 24px 20px;
+}
+.pf-wrapper {
+  padding: 20px 24px;
+  border: 1px solid var(--border-cardscolor);
 }
 /* -------------------------Footer------------------------ */
 
 .footer {
   background-color: var(--bacground-color);
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
-
 .footer .logo {
-  padding: 60px 0 20px 0;
+  margin-right: 0;
+  margin-bottom: 20px;
 }
-
 .address-list {
   display: flex;
   justify-content: center;
   flex-direction: column;
 }
-
 .accent-foot {
   color: var(--primary-color);
 }
-
 .address {
   font-style: normal;
   display: flex;
-  padding-bottom: 60px;
 }
 .address-city {
   color: var(--primary-color);
@@ -355,10 +335,9 @@ button {
   color: #b6b6b6;
 }
 .address-item {
-  display: inline-block;
-  padding-top: 0;
-  padding-bottom: 9px;
+  margin-top: 0;
+  margin-bottom: 9px;
 }
 .address-item:last-child {
-  padding-bottom: 0;
+  margin-bottom: 0;
 }
